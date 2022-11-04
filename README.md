@@ -1,3 +1,52 @@
+<h1 align="center"> EDA_Properties_Prediction_Colombia-Datathon:Bombilla: </h1>
+
+  
+
+# **Tabla de Contenido:**
+- [Prediccion precios inmobiliarios Colombia_Datathon <a name="datathon"></a>](#el-datathon-)
+- [Sobre el repositorio <a name="about_repo"></a>](#sobre-el-repositorio-)
+- [Notebook <a name="notebook"></a>](#notebook-)
+- [License](#license)
+
+
+# EDA_Prediction_Properties_colombia <a name="datathon"></a>
+
+Mercado inmobiliario
+​Dentro de la sociedad globalizada e industrializada, es sabido que los precios de los inmuebles han presentado un constante cambio, por lo que quienes deseen invertir o vender una propiedad se enfrentan al fenómeno especulativo existente en la valorización de éstos. Esto, debido a la constante tendencia de las ciudades a crecer demográfica y comercialmente, llegando a un punto en donde no se tiene certeza de la valorización real dentro del sector en donde se desee invertir.​Pese a que el precio depende, en cierta medida, de las tendencias que esté teniendo el mercado inmobiliario en un determinado tiempo, poder estimar adecuadamente el valor de una propiedad es una referencia clave para entender si es una buena oportunidad, ya sea de compra o de venta.​
+
+Descripción del problema
+​Usted ha sido contactado de una importante empresa inversora dentro del rubro de la inmobiliaria en Colombia, con el fin de que implemente un modelo de clasificación que permita clasificar el precio de las propiedades en venta, utilizando los datos que se han puesto a su disposición correspondientes al año 2020.​Para esto, específicamente, debe predecir la categorización de las propiedades entre baratas o caras, considerando como criterio el valor promedio de los precios (la media).​
+
+
+
+# Sobre el repositorio <a name="about_repo"></a>
+
+En el repositorio se encuentra el notebook `EDA_Properties2.ipynb`, donde se realizó el analisis exploratorio de datos EDA, se entreno el modelo para medir su rendimiento con las metricas (accuracy, recall) y se obtuvieron las predicciones.
+
+Se encuentran los *datasets* (properties_colombia train y test). DEben encontrarse en la misma carpeta del archivo noteboook.ipynb
+ 
+Tambien se encuentra el archivo README explicando el contenido y desarrollo del proyecto
+
+
+# Notebook <a name="notebook"></a>
+
+El notebook esta organizado de la siguiente manera:
+
+- **Procedimiento**: A partir de la columna price q es la variable objetivo a predecir (target) se obtiene un promedio para categorizar (encodear la variable numerica) las propiedades en caras(mayor al promedio) o baratas(menor al promedio). Se busca la correlacion y la distribucion de las variables objetivo y predictoras, se descarta columnas innecesarias con informacion irrelevante luego se imputan valores faltantes con simpleImputer con la media(promedio) para las variables mas relevantes para la prediccion. Se visualizan la ubicacion de las coordenadas(lat y lon), se estandariza las variables segun el modelo necesario a aplicar. DEspues se visualiza algunas variables predictoras respecto al precio. finalmente se trata el dataset de test aplicando los mismos procedimientos que al dataset de train(imputacion de faltantes, escalado y  nulos). Entrenamos nuestro modelo y predecimos, obteniendo las metrica  de accuracy_score y recall_score y se exporta a un archivo(.csv) con el nombre de usuario de github.csv que contiene la columna pred con los valores de prediccion que se hizo sobre el dataset de testeo.
+
+- **El EDA**: En esta parte encontramos la limpieza, calculos y visualización de variables. Las transformaciones principales que contribuyeron a utilizar adecuadamente los datos para el entrenamiento.
+
+
+- **Predicción**: Se escogió el modelo con mejor resultado para hacer las predicciones. En esta parte se hicieron las transformaciones pertinentes al set de prueba y se guardan las predicciones como un csv.
+
+
+
+# Licencia <a name="license"></a>
+
+El uso de este trabajo está licenciado bajo [GNU General Public License v3.0 (GNU GPLv3)](https://choosealicense.com/licenses/gpl-3.0/).
+
+
+
 ![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 ​
 # Proyecto individual 2
